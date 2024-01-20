@@ -1,21 +1,25 @@
 library(readxl)
 Daten1 = read_excel("~/GitHub/Erhebungstechniken/Daten_Lisa.xlsx", skip = 3)
 Daten2 = read_excel("~/GitHub/Erhebungstechniken/dataJK.xlsx", skip = 3)
+Daten3 = read_excel("~/GitHub/Erhebungstechniken/Erhebung_Philipp.xlsx", skip = 3)
 
-
-Daten = rbind(Daten1[,1:46], Daten2[1:46]) # alle Daten vereinen und Meta-Daten entfernen
+Daten = rbind(Daten1[1:46], Daten2[1:46], Daten3[1:46]) # alle Daten vereinen und Meta-Daten entfernen
 
 summary(Daten) # Ueberblick
 
 ################################################################################
 #   TODO Variablen:
+#         
+#         SPALTEN SINNVOLL UMBENNENEN, EINGABEN EINHEITLICH MACHEN
+#         - siehe nie/-1, NA/"NA", etc
+#         - Ziel: einfacher fuers mit arbeiten
 #
 #         Erstelle VarSport 
 #         - kombiniere alle Angaben zu Sporttaetigkeiten in einer Variable.
 #           also wie lang * wie oft * wie viel laufen/radfahren/arbeiten
 #         - am besten klassifizieren fuer bessere Grafiken
 #
-#         Klassifiziere Anstrengung für einfachere Interpretation
+#         Klassifiziere Anstrengung fuer einfachere Interpretation
 #         - z.B. gar nicht anstrengend, etwas anstrengend, anstrengend, sehr anstrengend
 #
 #
